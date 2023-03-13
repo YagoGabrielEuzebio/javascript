@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+</head>
+<body>
+    
+    <h1>Paises</h1>
+
+    <label for="pais">Digete seu Pais: </label>
+    <input type="text" name="pais" id="ipais">
+    <input type="button" id="butao" value="Enviar">
+
+    <div id="res"></div>
+
+    <script>
+
+        let pais = document.querySelector('#ipais')
+        let butao = document.querySelector('#butao')
+        let res = document.querySelector('#res')
+
+        butao.addEventListener('click', clicar)
+
+        function clicar() {
+
+            res.innerHTML += `<p>Vivendo em ${pais.value}</p>`
+            
+            if (pais.value == 'Brazil') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Estrangeiro!</p>`
+            }
+            
+
+        }
+
+    </script>
+
+
+</body>
+</html>
