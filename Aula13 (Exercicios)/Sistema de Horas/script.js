@@ -1,11 +1,13 @@
 function carregar() {
     let msg = document.querySelector('#msg')
     let foto = document.querySelector('#imagem')
-    let agora = new Date()
-    let hora = 18
+    let numhora = new Date()
+    let numminuto = new Date()
+    let hora = numhora.getHours()
+    let minuto = numminuto.getMinutes()
     let body = document.querySelector('#corpo')
 
-    msg.innerHTML = `Agora são ${hora} Horas.`
+    msg.innerHTML = `A Hora agora é ${hora}:${minuto} `
     
     if (hora >= 0 && hora < 5) {
         // Boa Madrugada
